@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task</title>
+</head>
+<body>
+    <p>This is the task</p>
+    <Button onclick="javascriptFunction();" class = "button1">Hello JavaScript</Button>
+    <script>
+        function javascriptFunction(){
+           //var javascriptElement = document.querySelector('.button1');
+
+           /*
+           if(javascriptElement.innerHTML === 'Hello JavaScript'){
+            javascriptElement.innerHTML = 'changed';
+           }else{
+            javascriptElement.innerHTML = 'Hello JavaScript';
+           }
+           */
+           var buttonElement = document.querySelector('.button1');
+
+            // Toggle the 'changed' class, and change the text accordingly
+            buttonElement.classList.toggle('changed');
+
+            if (buttonElement.classList.contains('changed')) {
+                buttonElement.textContent = 'Hello';
+            } else {
+                buttonElement.textContent = 'Hello JavaScript changed';
+            }
+          
+        }
+    </script>
+</body>
+</html>
